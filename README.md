@@ -14,5 +14,5 @@ Tuya Smart Production test SDK provides the interface package for the communicat
 
 ## Support
 
-[https://developer.tuya.com](https://developer.tuya.com/) <https://developer.tuya.com/cn/docs/iot/smart-production/production-test-solution/opening-ability?categoryId=479150>
+Tuya Developer Center:  https://developer.tuya.com/cn/docs/iot/smart-production/production-test-solution/opening-ability?categoryId=479150
 
