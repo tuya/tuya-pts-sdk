@@ -1,18 +1,25 @@
-# Tuya Production test SDK
+# Tuya Smart Production Test SDK
 
 [中文版](https://github.com/TuyaInc/TUYA_PTS_SDK/blob/master/README_zh.md) | [English](https://github.com/TuyaInc/TUYA_PTS_SDK/blob/master/README.md)
 
 ------
 
-## Features Overview
+## Introduction
 
-Tuya Smart Production test SDK provides the interface package for the communication with hardware and Tuya Cloud to accelerate the application development process, including the following features:
+Tuya Smart production test SDK provides interfaces for the communication with hardware and Tuya Cloud to accelerate the application development process, including the following features:
 
-- Hardware functions (GPIO，Write/Read MAC, Authorize，Firmware version check,...)
+- Hardware functions (GPIO，write/read MAC, authorize，firmware version check, and more)
 - Tuya device RF test package
-- Tuya Cloud HTTP API interface package
+- Tuya Cloud HTTP API package
 
-## Support
+## Download SDK
 
-Tuya Developer Center:  https://developer.tuya.com/cn/docs/iot/smart-production/production-test-solution/opening-ability?categoryId=479150
+You can download the SDK at the [GitHub](https://github.com/TuyaInc/TUYA_PTS_SDK/tree/master/TuyaCloudLib).
 
+## Documentation
+
+For more documentation, please check [Production Test Solution](https://developer.tuya.com/en/docs/iot/smart-production/production-test-solution/production-test-solution?id=Ka5nxrkr6mdkj).
+
+### Things to note
+
+This repository will be deprecated. Please go to the [new repository](https://github.com/tuya/tuya-pts-sdk).
