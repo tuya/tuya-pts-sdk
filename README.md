@@ -8,17 +8,17 @@
 
 Tuya Smart production test SDK provides interfaces for the communication with hardware and Tuya Cloud to accelerate the application development process, including the following features:
 
-- Hardware functions (GPIO，write/read MAC, authorize，firmware version check, and more)
+- Hardware functions (GPIO, write/read MAC, authorize, firmware version check, and more)
 - Tuya device RF test package
 - Tuya Cloud HTTP API package
 
 ## Download SDK
 
-You can download the SDK at the [GitHub](https://github.com/TuyaInc/TUYA_PTS_SDK/tree/master/TuyaCloudLib).
+You can download the SDK at [GitHub](https://github.com/TuyaInc/TUYA_PTS_SDK/tree/master/TuyaCloudLib).
 
 ## Documentation
 
-For more documentation, please check [Production Test Solution](https://developer.tuya.com/en/docs/iot/smart-production/production-test-solution/production-test-solution?id=Ka5nxrkr6mdkj).
+For more documentation, see [Production Test Solution](https://developer.tuya.com/en/docs/iot/smart-production/production-test-solution/production-test-solution?id=Ka5nxrkr6mdkj).
 
 ### Things to note
 
