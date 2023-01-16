@@ -4,80 +4,38 @@
         <name>TuyaCloudIfLib</name>
     </assembly>
     <members>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.muid">
+        <member name="T:TuyaCloudIfLib.AuthorizeTokenUrlSignParasReq">
             <summary>
-            乐鑫MUID
+            据高级能力中的相对路径获取下载链接请求入参
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.wifiHotspotName">
+        <member name="F:TuyaCloudIfLib.AuthorizeTokenUrlSignParasReq.path">
             <summary>
-            热点名称
+            tokeninfo接口instructionsV2中返回的url
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.tokenId">
+        <member name="T:TuyaCloudIfLib.AuthorizeTokenUrlSignParasRsp">
             <summary>
-            tokenId
+            据高级能力中的相对路径获取下载链接出参
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.accessKey">
+        <member name="F:TuyaCloudIfLib.AuthorizeTokenUrlSignParasRsp.result">
             <summary>
-            accessKey
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.nodeCode">
-            <summary>
-            站位名称
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.wifiPassword">
-            <summary>
-            热点密码
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.sn">
-            <summary>
-            产品SN
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.uuid">
-            <summary>
-            uuid
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.chipId">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.mac">
-            <summary>
-            mac
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckReq.sftVersion">
-            <summary>
-            应用软件版本
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckRsp.AuthValidateResult.result">
-            <summary>
-            授权检查结果
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckRsp.AuthValidateResult.failureDepict">
-            <summary>
-            失败原因
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.AuthCheckRsp.result">
-            <summary>
-            授权检查结果
+            获取的下载链接
             </summary>
         </member>
         <member name="T:TuyaCloudIfLib.TuyaCloudIf">
             <summary>
             tuya cloud interface
             </summary>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetAuthorizeTokenUrlSign(TuyaCloudIfLib.AuthorizeTokenUrlSignParasReq,System.String)">
+            <summary>
+            高级能力文件签名--根据高级能力中的相对路径获取下载链接 [s.pt.dev.authorize.api.token.url.sign 1.0]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AuthCheck(TuyaCloudIfLib.AuthCheckReq,System.String)">
             <summary>
@@ -95,6 +53,62 @@
             <param name="apiVer">接口版本</param>
             <returns></returns>
         </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ReportIMEI(TuyaCloudIfLib.ReportIMEIReq,System.String)">
+            <summary>
+            2G打标 上报IMEI [s.pt.dev.production.imei.report]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ReportSN(TuyaCloudIfLib.ReportSNReq,System.String)">
+            <summary>
+            工单模式下 自定义SN上报 [s.pt.dev.production.report.sn 1.0]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetDeviceAuthResAssign(TuyaCloudIfLib.DeviceAuthResAssignReq,System.String)">
+            <summary>
+            生成安全资源 [s.pt.production.device.auth.res.assign]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.IndependentTokenAuth(TuyaCloudIfLib.IndependentTokenAuthReq,System.String)">
+            <summary>
+            Token独立授权接口
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.IndependentTokenCheck(TuyaCloudIfLib.IndependentTokenCheckReq,System.String)">
+            <summary>
+            Token独立授权二次检查
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.IndependentTokenValidate(TuyaCloudIfLib.IndependentTokenValidateReq,System.String)">
+            <summary>
+            Independent Token Validate
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.CheckSecretKey(TuyaCloudIfLib.CheckSecretKeyReq,System.String)">
+            <summary>
+            秘钥校验
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.StationReset(TuyaCloudIfLib.StationResetReq,System.String)">
             <summary>
             工位状态重置 [s.pt.dev.production.station.reset ]
@@ -103,9 +117,148 @@
             <param name="apiVer">接口版本</param>
             <returns></returns>
         </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.IndependentAuth(TuyaCloudIfLib.IndependentAuthReq,System.String)">
+            <summary>
+            独立授权  [ s.pt.dev.production.independent.auth ]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.IndependentCheck(TuyaCloudIfLib.IndependentCheckReq,System.String)">
+            <summary>
+            独立授权检查接口  [ s.pt.dev.production.independent.check ]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.IndependentValidate(TuyaCloudIfLib.IndependentValidateReq,System.String)">
+            <summary>
+            独立授权校验  [ s.pt.dev.production.independent.validate ]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetAuthorizedMac(TuyaCloudIfLib.GetAuthorizedMacReq,System.String)">
+            <summary>
+            获取授权mac接口   [s.pt.dev.production.auth.mac.by.type.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryParticularPageInfo(TuyaCloudIfLib.QueryParticularPageInfoReq,System.String)">
+            <summary>
+            打印分页查询接口   [s.pt.dev.production.particular.page]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetSnBindAuthMac(TuyaCloudIfLib.GetSnBindAuthMacReq,System.String)">
+            <summary>
+            获取SN绑定的授权MAC接口   [s.pt.dev.production.sn.bind.auth.mac]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetLabelPrintInfo(TuyaCloudIfLib.LabelPrintInfoReq,System.String)">
+            <summary>
+            查询成品标签打印信息接口 [s.pt.label.print.info.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.CheckNodeIsPass(TuyaCloudIfLib.CheckCraftRouteNodeReq,System.String)">
             <summary>
             检查sn是否过站[s.pt.dev.check.node.isPassed]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetFFSOrderConfig(TuyaCloudIfLib.GetFFSOrderConfigReq,System.String)">
+            <summary>
+            获取工单FFS配置 [s.pt.dev.production.getFfsOrderConfig]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetFfsPrintInfo(TuyaCloudIfLib.GetFfsPrintInfoReq,System.String)">
+            <summary>
+            根据SN获取FFS打印的信息 [s.pt.dev.production.getFfsPrintInfo]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.FileUploadtoCOS(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            上传文件到COS 腾讯云  参数对应文件上传请求GetProductionFileUploadParas的出参
+            </summary>
+            <param name="uploadUrl"></param>
+            <param name="ossAccessId"></param>
+            <param name="signature"></param>
+            <param name="cloudKey"></param>
+            <param name="policy"></param>
+            <param name="qKeyTime"></param>
+            <param name="qSignAlgorithm"></param>
+            <param name="filepath"></param>
+            <param name="errormsg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.FileUploadtoOSS(System.String,System.String,System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            上传文件到OSS 阿里云 参数对应文件上传请求GetProductionFileUploadParas的出参
+            </summary>
+            <param name="uploadUrl">上传地址</param>
+            <param name="ossAccessId"></param>
+            <param name="signature"></param>
+            <param name="cloudKey"></param>
+            <param name="policy"></param>
+            <param name="filepath">带文件名称的文件路径</param>
+            <param name="errormsg">异常信息</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.FileToStream(System.String)">
+            <summary>
+            文件转流
+            </summary>
+            <param name="fileName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetProductionFileUploadParas(TuyaCloudIfLib.ProductionFileUploadParasReq,System.String)">
+            <summary>
+            获取上传日志文件所需信息 [s.pt.production.file.upload.get 3.0]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.SaveToolClientLog(TuyaCloudIfLib.SaveToolClientLogReq,System.String)">
+            <summary>
+            上传日志文件成功后保存信息 [s.pt.tool.client.log.save 2.0]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetMatterManualCodeByUuid(TuyaCloudIfLib.MatterManualCodeByUuidReq,System.String)">
+            <summary>
+            根据UUID获取手动配网码 [s.pt.production.token.matter.manualCode]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetProductionOrderSample(TuyaCloudIfLib.ProductionOrderSampleReq,System.String)">
+            <summary>
+            根据工单号获取样品标签的数据 [s.pt.dev.production.order.sample.get]
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -138,7 +291,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AuthorizedAmount(TuyaCloudIfLib.AuthorizedAmountReq,System.String)">
             <summary>
-            获取过站成功数量[s.pt.dev.production.station.pass.amount.cs]
+            获取过站成功数量[s.pt.dev.production.station.pass.amount]
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -160,9 +313,35 @@
             <param name="apiVer">接口版本3.0</param>
             <returns></returns>
         </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetShortLinkByUuid(TuyaCloudIfLib.ShortLinkByUuidReq,System.String)">
+            <summary>
+            根据UUID获取配网短链接和短码 [s.pt.dev.shortlink.get.by.uuid]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryTerminalSnAuthSn(TuyaCloudIfLib.QueryTerminalSnAuthSnReq,System.String)">
+            <summary>
+            根据SN获取授权数据   [ s.pt.dev.sn.bind.query ]
+            <para>其他相关接口，请参考：</para>
+            <para><seealso cref="M:TuyaCloudIfLib.TuyaCloudIf.ReportHomekitDataUsed(TuyaCloudIfLib.ReportHomekitDataUsedReq,System.String)"/> </para>
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.SnRefBind(TuyaCloudIfLib.SnRefBindReq,System.String)">
+            <summary>
+            终端SN和授权SN绑定接口 [s.pt.dev.sn.ref.bind 2.0]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.UnBindSN(TuyaCloudIfLib.UnbindSNReqParas,System.String)">
             <summary>
-            SN解绑[s.pt.dev.sn.unbind]
+            SN解绑[s.pt.dev.sn.unbind] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -170,7 +349,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.ReviewOrderSubmit(TuyaCloudIfLib.ReviewOrderSubmitReqParas,System.String)">
             <summary>
-            向tuya申请后绑定PID的生产凭证单号  [s.pt.dev.review.order.submit]
+            向tuya申请后绑定PID的生产凭证单号  [s.pt.dev.review.order.submit] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -178,7 +357,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryReviewOrder(TuyaCloudIfLib.QueryReviewOrderReqParas,System.String)">
             <summary>
-            查询生产凭证单号包含的信息：新的pid,数量等信息 [s.pt.dev.review.order.get]
+            查询生产凭证单号包含的信息：新的pid,数量等信息 [s.pt.dev.review.order.get] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -186,7 +365,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.BindSNToNewPID(TuyaCloudIfLib.BindSNToNewPIDReqParas,System.String)">
             <summary>
-            调用这个接口，输入参数:生产凭证单号 和SN 来绑定新的PID  [s.pt.dev.review.order.bind]
+            调用这个接口，输入参数:生产凭证单号 和SN 来绑定新的PID  [s.pt.dev.review.order.bind] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -210,7 +389,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.PackageChildrenQuery(TuyaCloudIfLib.PackageChildrenQueryReq,System.String)">
             <summary>
-            查询包装箱内所有产品的SN,MAC等信息 [s.pt.dev.package.children.query]
+            查询包装箱内所有产品的SN,MAC等信息 [s.pt.dev.package.children.query] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -258,7 +437,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.ModulePackageCheck(TuyaCloudIfLib.ModulePackageCheckReqParas,System.String)">
             <summary>
-            模块包装检查，检查模块是否可以包装。允许批量上传模块SN进行检查  [s.pt.dev.package.check]
+            模块包装检查，检查模块是否可以包装。允许批量上传模块SN进行检查  [s.pt.dev.package.check] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -266,7 +445,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.BindSN(TuyaCloudIfLib.BindSNReqParas,System.String)">
             <summary>
-            [s.pt.dev.sn.bind]
+            [s.pt.dev.sn.bind] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -274,29 +453,127 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.CloseModulePackage(TuyaCloudIfLib.CloseModulePackReqParas,System.String)">
             <summary>
-              模块包装的封包接口，调用此接口后，此箱号将不能继续包装  [s.pt.dev.package.finish]
+              模块包装的封包接口，调用此接口后，此箱号将不能继续包装  [s.pt.dev.package.finish] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
             <returns></returns>
         </member>
-        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ReportPrintLog(TuyaCloudIfLib.ReportPrintLogReqParas,System.String)">
-            <summary>
-            添加打印标记  [ s.pt.dev.mac.sn.printed ]
-            </summary>
-            <param name="ReqParas"></param>
-            <param name="apiVer">接口版本</param>
-            <returns></returns>
-        </member>
+        <!-- Badly formed XML comment ignored for member "M:TuyaCloudIfLib.TuyaCloudIf.ReportPrintLog(TuyaCloudIfLib.ReportPrintLogReqParas,System.String)" -->
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.Unpackage(TuyaCloudIfLib.UnpackageReqParas,System.String)">
             <summary>
-            解除包装接口  [s.pt.dev.package.cancel]
+            解除包装接口  [s.pt.dev.package.cancel] 已下线
             </summary>
             <param name="ReqParas">解除包装的请求参数</param>
             <param name="apiVer">接口版本</param>
             <returns></returns>
         </member>
-        <!-- 对于成员“M:TuyaCloudIfLib.TuyaCloudIf.GetStationInfo(TuyaCloudIfLib.GetStationInfoReq,System.String)”忽略有格式错误的 XML 注释 -->
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetDeviceCertificateByUuid(TuyaCloudIfLib.DeviceCertificateByUuidReq,System.String)">
+            <summary>
+            根据UUID获取加密芯片的云签证书 [s.pt.production.device.certificate.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetAuthInfoByMac(TuyaCloudIfLib.AuthInfoByMacReq,System.String)">
+            <summary>
+            根据MAC获取授权相关的信息 [s.pt.mac.success.auth.info.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetInfoByMac(TuyaCloudIfLib.GetInfoByMacReq,System.String)">
+            <summary>
+            根据mac地址获取对应的Info [s.pt.production.get.info.by.mac]
+            </summary>
+            <param name="req"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetFFSInfo(TuyaCloudIfLib.GetFFSInfoBySNReq,System.String)">
+            <summary>
+            根据SN获取FFS授权需要的信息 [s.pt.production.getFfsBySn]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetInstallcodeBySnOrMac(TuyaCloudIfLib.InstallcodeBySnOrMacReq,System.String)">
+            <summary>
+            根据sn/mac获取对应的installcode [s.pt.production.install.code.get]
+            </summary>
+            <param name="req"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetMatterQrcodeByUuid(TuyaCloudIfLib.MatterQrcodeByUuidReq,System.String)">
+            <summary>
+            根据UUID获取matter二维码的信息 [s.pt.production.token.matter.qrcode]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TuyaCloudIfLib.TuyaCloudIf.GetStationInfo(TuyaCloudIfLib.GetStationInfoReq,System.String)" -->
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetSuccessAuthInfoBySnAndToken(TuyaCloudIfLib.SuccessAuthInfoBySnAndTokenReqParas,System.String)">
+            <summary>
+            根据SN和生产凭证获取授权相关的信息 [s.pt.sn.success.auth.info.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetFindmyDataByUuid(TuyaCloudIfLib.FindmyDataByUuidReqParas,System.String)">
+            <summary>
+            获取find my授权信息  [s.pt.dev.findmy.get.by.uuid]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetHomeKitDataByUuid(TuyaCloudIfLib.GetHomeKitDataByUuidReq,System.String)">
+            <summary>
+            根据UUID获取 homekit数据   [ s.pt.dev.homekit.get.by.uuid ]
+            <para>其他相关接口，请参考：</para>
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetUserToolPermission(TuyaCloudIfLib.GetUserToolPermissionReq,System.String)">
+            <summary>
+            查询软件功能点   [s.pt.csm.or.user.tool.permission.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ReportFindmyAtokenUsed(TuyaCloudIfLib.FindmyAtokenUsedReqParas,System.String)">
+            <summary>
+            上报findmy已使用atoken  [s.pt.dev.findmy.atoken.used]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetFindmyDataBySn(TuyaCloudIfLib.FindmyDataBySnReqParas,System.String)">
+            <summary>
+            获取find my授权信息  [s.pt.dev.findmy.get.by.sn]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryWorkOrderSupportHomekit(TuyaCloudIfLib.QueryWorkOrderSupportHomekitReq,System.String)">
+            <summary>
+            查询工单是否要写homekit接口   [s.pt.dev.homekit.support.by.ordercode]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetNonInductiveInfo(TuyaCloudIfLib.GetNonInductiveInfoReq,System.String)">
             <summary>
             查询无感配网信息接口   [ s.pt.dev.production.non.inductive.info.get ]
@@ -316,7 +593,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.SecretAuth(TuyaCloudIfLib.SecretAuthReqParas,System.String)">
             <summary>
-            双向认证接口   [s.pt.dev.secure.auth]
+            双向认证接口   [s.pt.dev.secure.auth] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -332,7 +609,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryTestLog(TuyaCloudIfLib.QueryTestLogReqParas,System.String)">
             <summary>
-            查询测试日志。  [s.pt.dev.test.log.query ]
+            查询测试日志。  [s.pt.dev.test.log.query ] 接口已下线
              <para>其他相关接口，请参考：</para>
             <para><seealso cref="M:TuyaCloudIfLib.TuyaCloudIf.ProductionTestLogUpload(TuyaCloudIfLib.TestLogUploadReq,System.String)"/> 上传测试日志接口2.0 版本,推荐使用</para>
             <para><seealso cref="!:AddTestLog"/>  上传测试日志接口 1.0版本，不推荐使用</para>
@@ -343,7 +620,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AddPackageLog(TuyaCloudIfLib.AddPackageLogReqParas,System.String)">
             <summary>
-            添加包装日志到云端，pack_mini(彩包)、pack_big(大包)、pack_dish(托盘) [ s.pt.dev.package.add ]
+            添加包装日志到云端，pack_mini(彩包)、pack_big(大包)、pack_dish(托盘) [ s.pt.dev.package.add ] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -351,7 +628,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.PackModules(TuyaCloudIfLib.PackModuleReqParas,System.String)">
             <summary>
-             模块包装接口，将通过包装检查的SN,包装到指定箱号的包装箱中  [s.pt.dev.package.add]
+             模块包装接口，将通过包装检查的SN,包装到指定箱号的包装箱中  [s.pt.dev.package.add] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -459,7 +736,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryPackageLog(TuyaCloudIfLib.TuyaCloudIf.QueryPackageLogReqParas,System.String)">
             <summary>
-            查询包装记录  [ s.pt.dev.package.query ]
+            查询包装记录  [ s.pt.dev.package.query ] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -487,7 +764,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AllocateMacSN(TuyaCloudIfLib.TuyaCloudIf.AllocateMacSNReqParas,System.String)">
             <summary>
-            向云端申请SN-MAC,或者只申请SN   [ s.pt.dev.sn.mac.apply ]
+            向云端申请SN-MAC,或者只申请SN   [ s.pt.dev.sn.mac.apply ] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -527,7 +804,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.ProdBind(TuyaCloudIfLib.ProdBindReqParas,System.String)">
             <summary>
-            整机信息绑定，可以绑定整机sn，uuid，mac等 [ s.pt.production.product.bind ]
+            整机信息绑定，可以绑定整机sn，uuid，mac等 [ s.pt.production.product.bind ] 接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -552,6 +829,128 @@
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AddAuthLog(TuyaCloudIfLib.AddAuthLogReqParas,System.String)">
             <summary>
             提交授权测试日志到云端  [ s.pt.dev.authorize.log.add ]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.TelecomGetTelecomResBySn(TuyaCloudIfLib.TelecomGetTelecomResBySnReq,System.String)">
+            <summary>
+            根据sn获取电信双直连信息  [s.pt.dev.telecom.getTelecomResBySn]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetTelecomSupportByOrdercode(TuyaCloudIfLib.TelecomSupportByOrdercodeReq,System.String)">
+            <summary>
+            根据工单判断是否支持电信双直连  [s.pt.dev.telecom.support.by.ordercode]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ChipAuthDistributeSN(TuyaCloudIfLib.ChipAuthDistributeSNReq,System.String)">
+            <summary>
+            芯片授权申请SN接口   [s.pt.production.info.sn.distribute]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ClearChipAuthRecord(TuyaCloudIfLib.ClearChipAuthRecordReq,System.String)">
+            <summary>
+            芯片授权清除SN授权记录   [s.pt.production.sn.auth.clear]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="F:TuyaCloudIfLib.TuyaCloudIf.dogs">
+            <summary>
+            软件功能项注册信息列表
+            <para></para>
+            </summary>
+            <param name="port">串口编号</param>
+            <param name="baudrate">串口波特率</param>
+            <param name="apiVer">接口版本1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetSoftwareLicense(System.Management.EventArrivedEventHandler,System.String,System.String)">
+            <summary>
+            获取软件License文件信息
+            </summary>
+            <param name="removeHandler">加密狗移除时间处理函数</param>
+            <param name="port"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetValidDog(System.Collections.Generic.List{TuyaCloudIfLib.DogInfo},TuyaCloudIfLib.DogInfo@)">
+            <summary>
+            获取有效的加密狗
+            </summary>
+            <param name="dogs"></param>
+            <param name="dog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.TaskReadWatchDog(System.String)">
+            <summary>
+            读取加密狗id
+            </summary>
+            <param name="comport">加密狗串口号</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.DownloadLicenseFile(System.String,System.Int32,System.String,System.String,System.String@)">
+            <summary>
+            下载License文件
+            </summary>
+            <param name="url">License文件url</param>
+            <param name="size"></param>
+            <param name="md5"></param>
+            <param name="mac"></param>
+            <param name="destFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.EncryptString(System.String,System.String)">
+            <summary> /// 加密字符串  
+            </summary> 
+            <param name="str">要加密的字符串</param> 
+            <returns>加密后的字符串</returns> 
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.DecryptString(System.String,System.String)">
+            <summary> 
+            解密字符串  
+            </summary> 
+            <param name="str">要解密的字符串</param> 
+            <returns>解密后的字符串</returns>   
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.LoginTicketCreate(System.String)">
+            <summary>
+            创建登录ticket [s.pt.csm.or.prod.login.ticket.create]
+            </summary>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:TuyaCloudIfLib.TuyaCloudIf.GetProductionInfoDetail(TuyaCloudIfLib.ProductionInfoDetailReq,System.String)" -->
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.DealWithRadioInfo(TuyaCloudIfLib.DealWithRadioInfoReq,System.String)">
+            <summary>
+            广播消息处理  [ s.pt.production.radio.deal ]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryRadioInfo(TuyaCloudIfLib.QueryRadioInfoReq,System.String)">
+            <summary>
+            查询广播消息   [ s.pt.production.radio.query.push ]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">接口版本1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetWorkorderDetails(TuyaCloudIfLib.GetWorkorderDetailsReq,System.String)">
+            <summary>
+            获取工单详情 [s.pt.csm.work.order.info.get]
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -599,7 +998,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AuthorizeValidate_secretChip(TuyaCloudIfLib.SecretChipAuthValidateReqParas,System.String)">
             <summary>
-            [s.pt.dev.validate]
+            [s.pt.dev.validate] 已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -607,7 +1006,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AuthorizeValidate(TuyaCloudIfLib.AuthValidateReqParas,System.String)">
             <summary>
-            授权校验接口 版本1.0，这个接口使用与wifi，zigbee  [s.pt.dev.validate]
+            授权校验接口 版本1.0，这个接口使用与wifi，zigbee  [s.pt.dev.validate] 已下线
             </summary>
             <param name="ReqParas">授权校验输入参数</param>
             <param name="apiVer">接口版本</param>
@@ -615,7 +1014,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AuthorizeValidate(TuyaCloudIfLib.AuthValidateReqParasV2,System.String)">
             <summary>
-            授权校验接口 版本2.0 [ s.pt.dev.validate ]
+            授权校验接口 版本2.0 [ s.pt.dev.validate ] 已下线
             </summary>
             <param name="ReqParas">授权校验2.0 输入参数</param>
             <param name="apiVer">接口版本</param>
@@ -623,7 +1022,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AuthorizeValidateV3(TuyaCloudIfLib.AuthValidateReqParasV3,System.String)">
             <summary>
-            授权校验接口 3.0 [ s.pt.dev.validate ]
+            授权校验接口 3.0 [ s.pt.dev.validate ] 已下线
             </summary>
             <param name="ReqParas">授权校验接口 3.0输入参数</param>
             <param name="apiVer">接口版本</param>
@@ -631,7 +1030,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.Authorize(TuyaCloudIfLib.AuthReqParas,System.String)">
             <summary>
-            授权接口 版本1.0 [s.pt.dev.authorize]
+            授权接口 版本1.0 [s.pt.dev.authorize] 已下线
             </summary>
             <param name="ReqParas">授权输入参数</param>
             <param name="apiVer">接口版本</param>
@@ -655,7 +1054,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetTokenInfo(TuyaCloudIfLib.GetTokenInfoReqParas,System.String)">
             <summary>
-            查询授权码关联信息的接口 [s.pt.dev.authorize.api.token.get]
+            查询授权码关联信息的接口 [s.pt.dev.authorize.api.token.get] 2.0
             </summary>
             <param name="ReqParas">请求参数</param>
             <param name="apiVer">接口版本</param>
@@ -663,7 +1062,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetAuthKeyBySn(TuyaCloudIfLib.GetAuthKeyBySnReq,System.String)">
             <summary>
-            根据SN获取授权数据   [ s.pt.dev.allocate.auth.by.sn ]
+            根据SN获取授权数据   [ s.pt.dev.allocate.auth.by.sn ] 已下线
             <para>其他相关接口，请参考：</para>
             <para><seealso cref="M:TuyaCloudIfLib.TuyaCloudIf.ReportHomekitDataUsed(TuyaCloudIfLib.ReportHomekitDataUsedReq,System.String)"/> </para>
             </summary>
@@ -739,7 +1138,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.AllocateMacSN(TuyaCloudIfLib.AllocateMacSNReqParas_3,System.String)">
             <summary>
-            向云端申请分配绑定的mac-sn   [ s.pt.dev.production.apply ]
+            向云端申请分配绑定的mac-sn   [ s.pt.dev.production.apply ] 全部下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -755,7 +1154,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.ApplyTuyaSN(TuyaCloudIfLib.ApplyTuyaSNReqPara,System.String)">
             <summary>
-            根据贴片SN，获取事先绑定的TUYA SN
+            根据贴片SN，获取事先绑定的TUYA SN  接口已下线
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -766,6 +1165,70 @@
             根据mac地址获取对应的sn
             </summary>
             <param name="req"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.AddMiniPack(TuyaCloudIfLib.AddMiniPackReq,System.String)">
+            <summary>
+            彩盒工序上报打印标记接口   [s.pt.dev.mini.pack.add]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetMiniPackPrint(TuyaCloudIfLib.GetMiniPackPrintReq,System.String)">
+            <summary>
+            彩盒 工序获取打印（补打）信息接口   [s.pt.dev.mini.pack.print.get]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryMiniPackPatchPrint(TuyaCloudIfLib.QueryMiniPackPatchPrintReq,System.String)">
+            <summary>
+            彩盒工序获取补打信息接口   [s.pt.dev.mini.pack.query]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryPrintedNumber(TuyaCloudIfLib.QueryPrintedNumberReq,System.String)">
+            <summary>
+            .tht 工序查询打印数量接口   [s.pt.dev.printed.number.count]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.CreateProductionInfo(TuyaCloudIfLib.CreateProductionInfoReq,System.String)">
+            <summary>
+            工序获取打印信息接口   [s.pt.dev.production.info.create]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.QueryProductionInfoDetail(TuyaCloudIfLib.QueryProductionInfoDetailReq,System.String)">
+            <summary>
+            tht 工序查询打印日志接口   [s.pt.dev.production.info.detail.query]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetPatchPrintInfo(TuyaCloudIfLib.GetPatchPrintInfoReq,System.String)">
+            <summary>
+            tht工序获取补打信息接口   [s.pt.dev.production.info.patch]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetLabelTemplateInfo(TuyaCloudIfLib.GetLabelTemplateInfoReq,System.String)">
+            <summary>
+            获取工单标签模版接口   [s.pt.dev.template.get]
+            </summary>
+            <param name="ReqParas"></param>
             <param name="apiVer"></param>
             <returns></returns>
         </member>
@@ -832,6 +1295,15 @@
             <summary>
             
             </summary>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.SetUrlSftVer(System.String,System.String,TuyaCloudIfLib.TuyaCloudIf._LoginUrlType,System.Int32)">
+            <summary>
+            设置服务器url地址，应用软件名称，ID
+            </summary>
+            <param name="sftVer">应用软件名称，用于查服务器上查询是哪个应用软件调用了这个接口</param>
+            <param name="sftIdentity">应用软件的标识，用于查服务器上查询是哪个应用软件调用了这个接口</param>
+            <param name="urlType">默认为release服务器</param>
+            <param name="productLineType">0表示自动线，1表示手动线</param>
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.SetUrlSftVer(System.String,System.String,TuyaCloudIfLib.TuyaCloudIf._LoginUrlType)">
             <summary>
@@ -911,15 +1383,23 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetAuthInfoByUUID(TuyaCloudIfLib.GetAuthInfoByUUIDReq,System.String)">
             <summary>
-            根据UUID查询授权信息和PID，SN
+            根据UUID查询授权信息和PID，SN  [s.pt.dev.authorize.info.get 1.0]
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
             <returns></returns>
         </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetAuthInfoByUUID(TuyaCloudIfLib.GetAuthInfoByUUIDReqV2,System.String)">
+            <summary>
+            根据UUID查询授权信息和PID，SN [s.pt.dev.authorize.info.get 2.0]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.EquipmentCollection(TuyaCloudIfLib.EquipmentCollectionReq,System.String)">
             <summary>
-            上位机给云端发送回流炉状态 s.pt.dev.equipment.collection v1.0
+            上位机给云端发送数据采集的数据 s.pt.dev.equipment.collection v1.0
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
@@ -951,7 +1431,7 @@
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.Auth(TuyaCloudIfLib.AuthReq,System.String)">
             <summary>
-            工单授权接口1.0
+            工单授权接口2.0
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
@@ -1070,7 +1550,7 @@
             <para><seealso cref="M:TuyaCloudIfLib.TuyaCloudIf.QueryTestLog(TuyaCloudIfLib.QueryTestLogReqParas,System.String)"/>  查询测试日志的接口</para>
             </summary>
             <param name="ReqParas"></param>
-            <param name="apiVer">接口版本2.0</param>
+            <param name="apiVer">接口版本3.0</param>
             <returns></returns>
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetLoginToken(TuyaCloudIfLib.GetLoginTokenReq,System.String)">
@@ -1097,6 +1577,92 @@
             <param name="ReqParas">注销登录请求参数</param>
             <param name="apiVer">接口版本</param>
             <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.SetLoginInfo(System.String,System.String,System.String)">
+            <summary>
+            免登录设置用户登录sessionId
+            </summary>
+            <param name="SessionId"> 登录sessionId</param>
+            <param name="UserName">登录用户名</param>
+            <param name="FactoryName">登录用户所属工厂名称</param>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetLoginInfo(System.String@,System.String@,System.String@)">
+            <summary>
+            获取用户登录sessionId等信息
+            </summary>
+            <param name="SessionId"> 登录sessionId</param>
+            <param name="UserName">登录用户名</param>
+            <param name="FactoryName">登录用户所属工厂名称</param>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.muid">
+            <summary>
+            乐鑫MUID
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.wifiHotspotName">
+            <summary>
+            热点名称
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.tokenId">
+            <summary>
+            tokenId
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.accessKey">
+            <summary>
+            accessKey
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.nodeCode">
+            <summary>
+            站位名称
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.wifiPassword">
+            <summary>
+            热点密码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.sn">
+            <summary>
+            产品SN
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.chipId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.mac">
+            <summary>
+            mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckReq.sftVersion">
+            <summary>
+            应用软件版本
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckRsp.AuthValidateResult.result">
+            <summary>
+            授权检查结果
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckRsp.AuthValidateResult.failureDepict">
+            <summary>
+            失败原因
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthCheckRsp.result">
+            <summary>
+            授权检查结果
+            </summary>
         </member>
         <member name="T:TuyaCloudIfLib.AuthValidateReq">
             <summary>
@@ -1188,6 +1754,541 @@
             授权检测失败原因描述
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.AuthValidateRsp.AuthValidateResult.successAmount">
+            <summary>
+            授权成功数量
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthValidateRsp.AuthValidateResult.amount">
+            <summary>
+            工单的有效数量
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportSNReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportSNReq.reportSn">
+            <summary>
+            上报sn(必传)
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceAuthResAssignReq">
+            <summary>
+            安全资源的请求值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignReq.uuid">
+            <summary>
+            UUID 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignReq.tokenId">
+            <summary>
+            tokenId 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignReq.extParam">
+            <summary>
+            扩展参数，json 字符串
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ExtParamModel">
+            <summary>
+            扩展参数
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ExtParamModel.sl">
+            <summary>
+            安全等级 0,1,2,3
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ExtParamModel.publicKeyMtls">
+            <summary>
+            PSK3.0双向认证设备公钥，sl = 2,3时才有
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ExtParamModel.crc32PublicKeyMtls">
+            <summary>
+            PSK3.0双向认证设备公钥 crc32
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ExtParamModel.publicKeyMatter">
+            <summary>
+            Matter协议设备公钥
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ExtParamModel.crc32PublicKeyMatter">
+            <summary>
+            Matter协议设备公钥 crc32
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceAuthResAssignRsp">
+            <summary>
+            安全资源的返回值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignRsp.result">
+            <summary>
+            安全资源
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceAuthResAssignModel">
+            <summary>
+            安全资源的信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignModel.register_center">
+            <summary>
+            注册中心信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignModel.psk">
+            <summary>
+            安全等级的psk
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignModel.device_certificate">
+            <summary>
+            安全等级sl = 2,3时的设备证书
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignModel.matter_resource">
+            <summary>
+            matter的资源
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceAuthResAssignPsk">
+            <summary>
+            安全等级的psk
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPsk.pskKey">
+            <summary>
+            pskKey
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceAuthResAssignPskCertificate">
+            <summary>
+            安全等级sl = 2,3时的设备证书
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskCertificate.deviceCrt">
+            <summary>
+            设备证书
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskCertificate.crc32DeviceCrt">
+            <summary>
+            crc32
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter">
+            <summary>
+            设备注册中心
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.code">
+            <summary>
+            云 ID
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.pub">
+            <summary>
+            是否公有云 true是公有云，false是私有云
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.url0">
+            <summary>
+            注册中心地址
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.url1">
+            <summary>
+            注册中心地址 注册中心地址（安全等级 SL = 1 时）
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.url2">
+            <summary>
+            注册中心地址 注册中心地址（安全等级 SL = 2 时）
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.url3">
+            <summary>
+            注册中心地址 注册中心地址（安全等级 SL = 3 时）
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter.ca">
+            <summary>
+            客户提供的注册中心域名对应的ca，设备安全级别为1、2、3的时候，需要写入
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterResource">
+            <summary>
+            matter的资源
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.matterPayload">
+            <summary>
+            matter的payload
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.spakeParam">
+            <summary>
+            matter的spakeParam
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.dacCrt">
+            <summary>
+            DAC证书，DER格式
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.crc32DacCrt">
+            <summary>
+            crc32格式DAC证书
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.paiCrt">
+            <summary>
+            PAI证书，PEM格式
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.crc32PaiCrt">
+            <summary>
+            crc32格式PAI证书
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterResource.cd">
+            <summary>
+            cd data 只有MatterPid=22的才会返回（对应tuya的pid是rdcpz5dsc1bfpmop）
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterPayload">
+            <summary>
+            matter的payload
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.version">
+            <summary>
+            版本，默认0
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.vendorId">
+            <summary>
+            厂家ID
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.productId">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.customFlow">
+            <summary>
+            调测流程
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.discoveryCapabilities">
+            <summary>
+            配网能力,2进制转10进制值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.discriminator">
+            <summary>
+            机器码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.passcode">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterSpakeParam">
+            <summary>
+            matter的spakeParam
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterSpakeParam.salt">
+            <summary>
+            盐值，随机生成，16-32bytes
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterSpakeParam.iterations">
+            <summary>
+            迭代次数，1000-100000
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterSpakeParam.w0">
+            <summary>
+            PAKE参数，w0s mod p
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterSpakeParam.l">
+            <summary>
+            PAKE参数，w1s * P
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentTokenAuthReq">
+             <summary>
+            Token独立授权接口 入参
+             </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthReq.tokenId">
+            <summary>
+            必填
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthReq.sn">
+            <summary>
+            选填,sn
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthReq.mac">
+            <summary>
+            必填,mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthReq.sftVersion">
+            <summary>
+            必填,工具软件版本，
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthReq.lexin">
+            <summary>
+            是否是乐鑫授权，默认false
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthReq.distributeMac">
+            <summary>
+            是否分配mac, 默认值为true
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentTokenAuthRsp">
+            <summary>
+            Token独立授权接口 出参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenAuthRsp.result">
+            <summary>
+             提交修正授权数量请求结果
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.mac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.accessKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.pskKey">
+            <summary>
+            psk通讯秘钥
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.certificateContent">
+            <summary>
+            证书内容
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.privateKey">
+            <summary>
+            私钥
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.crc32CertificateContent">
+            <summary>
+            证书crc校验码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenAuthRsp.IndependentTokenAuthResult.crc32PrivateKey">
+            <summary>
+            私钥CRC校验码
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentTokenCheckReq">
+            <summary>
+            Token独立授权二次检查 入参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.tokenId">
+            <summary>
+            必填,激活码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.sn">
+            <summary>
+            选填,sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.mac">
+            <summary>
+            mac地址
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.accessKey">
+            <summary>
+            accessKey
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.wifiHotspotName">
+            <summary>
+            选填,热点名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.wifiPassword">
+            <summary>
+            选填，热点密码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.sftVersion">
+            <summary>
+            必填,工具版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenCheckReq.lexin">
+            <summary>
+            是否是乐鑫授权
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentTokenCheckRsp">
+            <summary>
+            Token独立授权二次检查 出参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenCheckRsp.result">
+            <summary>
+             Token独立授权二次检查结果
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenCheckRsp.IndependentTokenCheckResult.result">
+             <summary>
+            二次检查结果
+             </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenCheckRsp.IndependentTokenCheckResult.failureDepict">
+            <summary>
+            修正后的授权数量
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentTokenValidateReq">
+            <summary>
+            Token独立授权Validate 入参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.tokenId">
+            <summary>
+            必填,激活码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.sn">
+            <summary>
+            选填,sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.mac">
+            <summary>
+            mac地址
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.accessKey">
+            <summary>
+            accessKey
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.wifiHotspotName">
+            <summary>
+            选填,热点名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.wifiPassword">
+            <summary>
+            选填，热点密码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.sftVersion">
+            <summary>
+            必填,工具版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentTokenValidateReq.lexin">
+            <summary>
+            是否是乐鑫授权
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentTokenValidateRsp">
+            <summary>
+            Token独立授权Validate 出参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenValidateRsp.result">
+            <summary>
+             提交修正授权数量请求结果
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenValidateRsp.IndependentTokenValidateResult.successAmount">
+            <summary>
+            已授权成功数量
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentTokenValidateRsp.IndependentTokenValidateResult.amount">
+            <summary>
+            授权总数
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.CheckSecretKeyReq">
+            <summary>
+            秘钥校验实体类
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CheckSecretKeyReq.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CheckSecretKeyReq.keys">
+            <summary>
+            秘钥类型和秘钥数据
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.KeysItem.type">
+            <summary>
+            秘钥类型
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.KeysItem.val">
+            <summary>
+            秘钥数据
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.KeyType">
+            <summary>
+            秘钥类型
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CheckSecretKeyRsp.result">
+            <summary>
+            秘钥校验结果
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.StationResetReq">
             <summary>
             工位状态重置
@@ -1223,6 +2324,547 @@
             
             </summary>
         </member>
+        <member name="T:TuyaCloudIfLib.IndependentAuthReq">
+            <summary>
+            独立授权入参定义
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.requestId">
+            <summary>
+            不可为空，站位重置接口返回
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.stationCode">
+            <summary>
+            工位编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.tokenId">
+            <summary>
+            授权码，不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.sn">
+            <summary>
+            SN，不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.mac">
+            <summary>
+            mac，如果是zigbee，这里需要上传从模块中读取的mac
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.sftVersion">
+            <summary>
+            产测工具版本，不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthReq.lexin">
+            <summary>
+            是否是乐鑫平台，授权时需要上报是否是乐鑫平台的信息给云端
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentAuthRsp">
+            <summary>
+            独立授权出参定义
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentAuthRsp.result">
+            <summary>
+            独立授权返回结果
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.uuid">
+            <summary>
+            模块uuid（模块的uuid这里由云端生成，生成规则沿用老逻辑，根据不同的联网模式来生成uuid）
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.mac">
+            <summary>
+            mac地址
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.accessKey">
+            <summary>
+            accessKey
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.pskKey">
+            <summary>
+            psk通讯秘钥
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.certificateContent">
+            <summary>
+            证书内容
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.privateKey">
+            <summary>
+            私钥
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.crc32CertificateContent">
+            <summary>
+            证书CRC32值
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentAuthResult.crc32PrivateKey">
+            <summary>
+            私钥CRC32值
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentCheckReq">
+            <summary>
+            独立授权检查接口入参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.stationCode">
+            <summary>
+            不可为空，工位编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.tokenId">
+            <summary>
+            授权码，不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.sn">
+            <summary>
+            sn,不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.mac">
+            <summary>
+            mac地址，从模组里读取出来，不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.uuid">
+            <summary>
+            不可为空，模块uuid，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.accessKey">
+            <summary>
+            授权码，zigbee可以为空，因为zigbee模块不写accessKey
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.wifiHotspotName">
+            <summary>
+            热点名称，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.wifiPassword">
+            <summary>
+            wifi密码，，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.sftVersion">
+            <summary>
+            不可为空，产测软件版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentCheckReq.lexin">
+            <summary>
+            是否是乐鑫平台，授权时需要上报是否是乐鑫平台的信息给云端
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentCheckRsp">
+            <summary>
+            独立授权Check 出参
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentValidateReq">
+            <summary>
+            独立授权校验接口入参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.requestId">
+            <summary>
+             不可为空，从auth接口的返回参数上传
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.stationCode">
+            <summary>
+            工位编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.tokenId">
+            <summary>
+            tokenId不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.sn">
+            <summary>
+            sn不可为空
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.mac">
+            <summary>
+             mac地址，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.uuid">
+            <summary>
+            不可为空，模块uuid，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.accessKey">
+            <summary>
+            不可为空，授权码，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.wifiHotspotName">
+            <summary>
+            热点名称，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.wifiPassword">
+            <summary>
+            wifi密码，，从模块里读取出来
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.sftVersion">
+            <summary>
+            不可为空，产测软件版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateReq.lexin">
+            <summary>
+            是否是乐鑫平台，授权时需要上报是否是乐鑫平台的信息给云端
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateResult.successAmount">
+            <summary>
+            授权成功数量
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.IndependentValidateResult.amount">
+            <summary>
+            token有效数量
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.IndependentValidateRsp">
+            <summary>
+            独立授权校验出参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.IndependentValidateRsp.result">
+            <summary>
+            独立授权校验返回结果
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetAuthorizedMacReq.type">
+            <summary>
+            类型(SN)(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetAuthorizedMacReq.value">
+            <summary>
+            值(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoReq.printed">
+            <summary>
+            是否打印(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoReq.offset">
+            <summary>
+            偏移量(可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoReq.limit">
+            <summary>
+            页大小(可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoReq.orderCode">
+            <summary>
+            工单编码(可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoReq.type">
+            <summary>
+            类型(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoReq.value">
+            <summary>
+            值(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.originProductSize">
+            <summary>
+            原始的产品型号（制造商型号）
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.moduleProductSize">
+            <summary>
+            模块产品型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.productSize">
+            <summary>
+            产品型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.pid">
+            <summary>
+            PID
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.originMaterialCode">
+            <summary>
+            原始的物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.materialCode">
+            <summary>
+            物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.mac">
+            <summary>
+            mac
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.baseMaterialCode">
+            <summary>
+            基础物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.printedTime">
+            <summary>
+            打印时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.orderCode">
+            <summary>
+            工单编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.sn">
+            <summary>
+            sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.ctei">
+            <summary>
+            ctei
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.attachSn">
+            <summary>
+            授权sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ParticularPageInfoDataItem.pn">
+            <summary>
+            P/N
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoResult.data">
+            <summary>
+            分页信息
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryParticularPageInfoResult.totalCount">
+            <summary>
+            分页数量
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacReq.authMac">
+            <summary>
+            授权mac(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacReq.customAttributes">
+            <summary>
+            自定义变量(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.originProductSize">
+            <summary>
+            原始的产品型号（制造商型号）
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.baseMaterialCode">
+            <summary>
+            基础物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.moduleProductSize">
+            <summary>
+            模块产品型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.productSize">
+            <summary>
+            产品型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.originMaterialCode">
+            <summary>
+            原始的物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.pid">
+            <summary>
+            pid
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.materialCode">
+            <summary>
+            物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.orderCode">
+            <summary>
+            工单编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.sn">
+            <summary>
+            SN
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.mac">
+            <summary>
+            MAC
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.pn">
+            <summary>
+            P/N
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.ctei">
+            <summary>
+            CTEI
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.cuei">
+            <summary>
+            CUEI
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetSnBindAuthMacResult.cmei">
+            <summary>
+            CMEI
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoReq.type">
+            <summary>
+            入参类型 LabelPrintInfoType
+            [auth_sn 授权 SN（包含系统生成、客户自定义），查询 SN 信息、授权记录
+            bind_sn 绑定的终端 SN，查询绑定的授权 SN
+            mac MAC，查询授权记录
+            uuid UUID，查询授权记录
+            imei IMEI，查询授权 SN]
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoReq.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoReq.features">
+            <summary>
+            其他数据结构 featuresModel
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LabelPrintInfoType">
+            <summary>
+            入参类型
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoType.auth_sn">
+            <summary>
+            授权 SN（包含系统生成、客户自定义），查询 SN 信息、授权记录
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoType.bind_sn">
+            <summary> 
+            绑定的终端 SN，查询绑定的授权 SN
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoType.mac">
+            <summary>
+            MAC，查询授权记录
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoType.uuid">
+            <summary>
+            UUID，查询授权记录
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoType.imei">
+            <summary>
+            IMEI，查询授权 SN
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LabelPrintInfoFeaturesModel">
+            <summary>
+            辅助查询码模型
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoFeaturesModel.code">
+            <summary>
+            辅助查询码 LabelPrintInfoFeatureCode
+            [channel 运营商编号
+            short_url 配网码
+            ffs FFS
+            homekit  HomeKit
+            install_code  installcode
+            matter  ]
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoFeaturesModel.extParam">
+            <summary>
+            short_url 配网码的额外参数
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LabelPrintInfoFeatureCode">
+            <summary>
+             辅助查询码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoFeatureCode.channel">
+            <summary>
+            运营商编号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoFeatureCode.short_url">
+            <summary>
+            配网码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintInfoFeatureCode.ffs">
+            <summary>
+            FFS
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LabelPrintShortUrlFeatureExtParam">
+            <summary>
+            short_url 配网码的额外参数
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintShortUrlFeatureExtParam.appId">
+            <summary>
+            appid
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LabelPrintShortUrlFeatureExtParam.saasNetwork">
+            <summary>
+            是否是共享码
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.CheckCraftRouteNodeReq">
             <summary>
             检查sn是否过站请求入参定义
@@ -1241,6 +2883,126 @@
         <member name="F:TuyaCloudIfLib.CheckCraftRouteNodeRsp.result">
             <summary>
             工位测试状态，true表示已测试通过，false表示未测试或测试失败
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionFileUploadParasReq.bizType">
+            <summary>
+            工具上传使用tool_client_log
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionFileUploadParasReq.name">
+            <summary>
+            上传日志文件的名字
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionFileUploadParasReq.isIE">
+            <summary>
+            是否是IE浏览器上传 false
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionFileUploadParasResult.uploadCos">
+            <summary>
+            是否是腾讯云
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SaveToolClientLogReq.toolCode">
+            <summary>
+            工具识别码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SaveToolClientLogReq.toolName">
+            <summary>
+            工具名称
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SaveToolClientLogReq.logName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SaveToolClientLogReq.logUrl">
+            <summary>
+            对应GetProductionFileUploadParas出参中的cloudKey
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SaveToolClientLogReq.customerContact">
+            <summary>
+            客户联系方式， 2.0接口必须输入
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SaveToolClientLogReq.handler">
+            <summary>
+            处理人（工号） 主要用于群机器人消息通知，如果没传处理人则 @all
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterManualCodeByUuidReq">
+            <summary>
+            根据UUID获取手动配网码 请求值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterManualCodeByUuidReq.uuid">
+            <summary>
+            UUID 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterManualCodeByUuidReq.tokenId">
+            <summary>
+            tokenId 不能为空
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterManualCodeByUuidRsp">
+            <summary>
+            根据UUID获取matter二维码的信息 返回值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterManualCodeByUuidRsp.result">
+            <summary>
+            matter手动配网码
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ProductionOrderSampleReq">
+            <summary>
+            根据工单号获取样品标签的数据入参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionOrderSampleReq.orderId">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ProductionOrderSampleRsp">
+            <summary>
+            根据工单号获取样品标签的数据出参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionOrderSampleRsp.result">
+            <summary>
+            样品标签的详情
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.OrderSampleMode">
+            <summary>
+            样品标签的详情
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.OrderSampleMode.quantity">
+            <summary>
+            数量
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.OrderSampleMode.orderId">
+            <summary>
+            订单
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.OrderSampleMode.brandInfo">
+            <summary>
+            模组型号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.OrderSampleMode.token">
+            <summary>
+            工单列表
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.StationStatusCommitReq.stationCode">
@@ -1298,24 +3060,164 @@
             工单信息
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.materielCode">
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.orderCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.materielCode">
             <summary>
             物料编码
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.productSize">
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.productSize">
             <summary>
             产品型号
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.pcsNum">
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.pcsNum">
             <summary>
             订单批量
             </summary>
         </member>
-        <member name="F:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.tokenId">
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.num">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.batchNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.tokenId">
             <summary>
             激活码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.packageNum">
+            <summary>
+            包装容量(每一个包装箱或卷带可以包装产品的数量)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.orderFrom">
+            <summary>
+            工单来源
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.moduleCategory">
+            <summary>
+            模组型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.manufacturerModel">
+            <summary>
+            制造商型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.productionName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.factoryCode">
+            <summary>
+            工厂代码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.postMaterielCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.modelNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.customerSn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.firmwareVersion">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.wifiHotspotName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.productId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.labelFccId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.outRelationOrderCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.labelModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.deliverOperate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.desc">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.materielType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.pnNumber">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.materielCategory">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.customOderCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.so">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.baseMaterielCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.customerMac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkOrderInfoRsp.WorkOrderInfo.deliverOperateChild">
+            <summary>
+            
             </summary>
         </member>
         <member name="T:TuyaCloudIfLib.StationPassAmountReq">
@@ -1431,6 +3333,116 @@
         <member name="P:TuyaCloudIfLib.GetSmartConfigQRCodeRsp.GetSmartConfigQRCodeResult.deviceCode">
             <summary>
             //短码
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ShortLinkByUuidReq">
+            <summary>
+            根据uuid获取短连接请求值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuidReq.uuid">
+            <summary>
+            UUID 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuidReq.tokenId">
+            <summary>
+            tokenId 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuidReq.appId">
+            <summary>
+            不用设置，为空
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ShortLinkByUuidRsp">
+            <summary>
+            根据uuid获取短连接返回值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuidRsp.result">
+            <summary>
+            配网信息的详细
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ShortLinkByUuid">
+            <summary>
+            配网信息的详细
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuid.sn">
+            <summary>
+            授权SN
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuid.shortUrl">
+            <summary>
+            配网短链接
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuid.deviceCode">
+            <summary>
+            配网短码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ShortLinkByUuid.uuid">
+            <summary>
+            UUID
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryTerminalSnAuthSnReq.batchNo">
+            <summary>
+            批次号，非必填
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryTerminalSnAuthSnReq.terminalSn">
+            <summary>
+            终端sn(即客户端SN)，非必填
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryTerminalSnAuthSnReq.authSn">
+            <summary>
+            授权sn，非必填
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.DataItem.terminalSn">
+            <summary>
+            终端sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.DataItem.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.DataItem.authSn">
+            <summary>
+            授权sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryTerminalSnAuthSnResult.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryTerminalSnAuthSnResult.totalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SnRefBindReq.batchNo">
+            <summary>
+            批次号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SnRefBindReq.terminalSn">
+            <summary>
+            终端sn
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.SnRefBindReq.authSn">
+            <summary>
+            授权sn
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.UnbindSNReqParas.terminalSN">
@@ -1840,27 +3852,52 @@
         </member>
         <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.packageCode">
             <summary>
-            编码
+            编码 1.0版本接口专用字段
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.tokenId">
             <summary>
-            授权码
+            授权码 1.0版本接口专用字段
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.keyType">
             <summary>
-            条码的类型，可选值包括：sn、mac
+            条码的类型，可选值包括：sn、mac  1.0版本接口专用字段
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.key">
             <summary>
-            条码的值
+            条码的值, 1.0版本接口专用字段
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.orderCode">
+            <summary>
+            工单编码(必传) 4.0版本接口专用字段
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.sn">
+            <summary>
+            sn列表,多个使用","分割(必传) 4.0版本接口专用字段
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.process">
+            <summary>
+            工序(必传) 4.0版本接口专用字段
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportPrintLogReqParas.printFlag">
+            <summary>
+            打印标记(1:打印,2补打)(必传) 4.0版本接口专用字段
             </summary>
         </member>
         <member name="T:TuyaCloudIfLib.ReportPrintLogRspParas">
             <summary>
             打印标记返回数据包
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ReportPrintLogRspParas.result">
+            <summary>
+            上报成功数量，4.0版本接口新增
             </summary>
         </member>
         <member name="T:TuyaCloudIfLib.UnpackageReqParas">
@@ -1881,6 +3918,261 @@
         <member name="T:TuyaCloudIfLib.UnpackageRspParas">
             <summary>
             解除包装返回的数据包
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceCertificateByUuidReq">
+            <summary>
+            根据UUID获取加密芯片的云签证书 请求值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuidReq.uuid">
+            <summary>
+            UUID 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuidReq.tokenId">
+            <summary>
+            tokenId 不能为空
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceCertificateByUuidRsp">
+            <summary>
+            根据UUID获取加密芯片的云签证书 返回值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuidRsp.result">
+            <summary>
+            云签证书详细信息
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DeviceCertificateByUuid">
+            <summary>
+            云签证书详细信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuid.certificateContent">
+            <summary>
+            安全认证证书
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuid.privateKey">
+            <summary>
+            安全私钥
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuid.crc32CertificateContent">
+            <summary>
+            安全证书CRC校验码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceCertificateByUuid.crc32PrivateKey">
+            <summary>
+            私钥CRC校验码
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.AuthInfoByMacReq">
+            <summary>
+            根据MAC获取授权相关的信息的入参MAC
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthInfoByMacReq.mac">
+            <summary>
+            mac
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.AuthInfoByMacRsp">
+            <summary>
+            根据MAC获取授权相关的信息的出参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthInfoByMacRsp.result">
+            <summary>
+            信息
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.AuthInfoByMacModel">
+            <summary>
+            根据MAC获取的信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthInfoByMacModel.mac">
+            <summary>
+            mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthInfoByMacModel.tokenId">
+            <summary>
+            生产凭证
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.AuthInfoByMacModel.productId">
+            <summary>
+            pid
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetInfoByMacReq.mac">
+            <summary>
+            模块mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetInfoByMacRsp.result">
+            <summary>
+            模块Info
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.creator">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.gmtModified">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.bizType">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.tokenId">
+            <summary>
+            生产凭证
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.modifier">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.unitNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.gmtCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.mac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.unitType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.sequence">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.printed">
+            <summary>
+            是否打印
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.printedTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.isDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.patchedTime">
+            <summary>
+            补打时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.orderCode">
+            <summary>
+            工单编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.sn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.packed">
+            <summary>
+            包装状态(Y:是,N:否)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.isReported">
+            <summary>
+            是否为上报的SN(Y:是,N:否)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.status">
+            <summary>
+            状态 0待生产 10生产中 20入库 30出库 40故障
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoMode.attributes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.AttributesModel.mac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstallcodeBySnOrMacReq.mac">
+            <summary>
+            模块mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstallcodeBySnOrMacReq.sn">
+            <summary>
+            模块sn
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstallcodeBySnOrMacRsp.result">
+            <summary>
+            installcode
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterQrcodeByUuidReq">
+            <summary>
+            根据UUID获取matter二维码的信息 请求值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterQrcodeByUuidReq.uuid">
+            <summary>
+            UUID 不能为空
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterQrcodeByUuidReq.tokenId">
+            <summary>
+            tokenId 不能为空
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MatterQrcodeByUuidRsp">
+            <summary>
+            根据UUID获取matter二维码的信息 返回值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterQrcodeByUuidRsp.result">
+            <summary>
+            matter二维码的内容
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.GetStationInfoReq.sn">
@@ -1926,6 +4218,186 @@
         <member name="P:TuyaCloudIfLib.GetStationInfoRsp.result">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyDataByUuidReqParas">
+            <summary>
+            获取find my授权信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.FindmyDataByUuidReqParas.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyDataByUuidRspParas">
+            <summary>
+            获取find my授权信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.FindmyDataByUuidRspParas.result">
+            <summary>
+            相关信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetHomeKitDataByUuidReq.uuid">
+            <summary>
+            uuid
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.GetUserToolPermissionReq">
+            <summary>
+            查询软件功能点接口入参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetUserToolPermissionReq.permissionCode">
+            <summary>
+            软件工具识别码，若为空，则返回所有软件的功能点
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.GetUserToolPermissionRsp">
+            <summary>
+            查询软件功能点接口出参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PermissionModel.code">
+            <summary>
+            权限编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PermissionModel.name">
+            <summary>
+            权限名
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PermissionModel.englishName">
+            <summary>
+            英文名
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PermissionModel.functions">
+            <summary>
+            功能点列表
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PermissionFunction.code">
+            <summary>
+            功能点编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PermissionFunction.name">
+            <summary>
+            功能点名称
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyAtokenUsedReqParas">
+            <summary>
+            上报已使用atoken
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyAtokenUsedReqParas.sn">
+            <summary>
+            如果是工单模式，sn不能为空，接口版本号必须是1.0
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyAtokenUsedReqParas.uuid">
+            <summary>
+            如果是token模式，uuid不能为空，接口版本号必须是2.0
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyAtokenUsedReqParas.auuid">
+            <summary>
+            auuid
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyAtokenUsedRspParas">
+            <summary>
+            上报已使用atoken 返回
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.FindmyAtokenUsedRspParas.result">
+            <summary>
+            上报findmy数据已经使用的结果
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyDataBySnReqParas">
+            <summary>
+            获取find my授权信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.FindmyDataBySnReqParas.sn">
+            <summary>
+            sn
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyDataBySnRspParas">
+            <summary>
+            获取find my授权信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.FindmyDataBySnRspParas.result">
+            <summary>
+            相关信息
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.FindmyDataBySnResult">
+            <summary>
+            find my数据model
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.ppid">
+            <summary>
+            PPID，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.productNumber">
+            <summary>
+            Product Number，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.productData">
+            <summary>
+            Product Data，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.productGroup">
+            <summary>
+            Product Group，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.serverEncryptionKey">
+            <summary>
+            Server Encryption Key，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.signatureVerificationKey">
+            <summary>
+            Signature Verification Key，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.uid">
+            <summary>
+            UID，必填项，苹果侧的产品字段
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.auuid">
+            <summary>
+             auuid，必填项，随机生成UUID
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.FindmyDataBySnResult.atoken">
+            <summary>
+            atoken，必填项，苹果侧的base64编码atoken
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryWorkOrderSupportHomekitReq.orderCode">
+            <summary>
+            工单
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryWorkOrderSupportHomekitRsp.result">
+            <summary>
+            查询结果，true:要写homekit，false:不用
             </summary>
         </member>
         <member name="P:TuyaCloudIfLib.GetNonInductiveInfoReq.sn">
@@ -2448,6 +4920,26 @@
             京东云秘钥
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.MacSNData.macMap">
+            <summary>
+            MAC列表
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.MacMapModel">
+            <summary>
+            MAC模型及列表
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MacMapModel.public_mac">
+            <summary>
+            公有MAC (wifi联盟的：比如WIFI MAC)
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MacMapModel.private_mac">
+            <summary>
+            私有MAC (涂鸦的：比如蓝牙MAC)
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.QueryMacSNReqParas_2">
             <summary>
             此类型已经废弃，请用具有相同功能的QueryMacSNReqParas替代
@@ -2571,6 +5063,11 @@
         <member name="F:TuyaCloudIfLib.QueryMacSNRspParas_2.MacSNData.jdSecretKey">
             <summary>
             京东云秘钥
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryMacSNRspParas_2.MacSNData.macMap">
+            <summary>
+            MAC列表
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.QueryMacSNRspParas_2.result">
@@ -2879,6 +5376,506 @@
             国家码，如果不支持写国家码的，则该字段为空，否则填写从模块中读取的国家码如：US,EU等
             </summary>
         </member>
+        <member name="T:TuyaCloudIfLib.ChipAuthDistributeSNReq">
+            <summary>
+            芯片授权申请SN接口入参
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ChipAuthDistributeSNReq.orderCode">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ChipAuthDistributeSNReq.num">
+            <summary>
+            申请SN数量
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DistributeSN">
+            <summary>
+            芯片授权申请到的SN
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.DistributeSN.sn">
+            <summary>
+            申请到的sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.DistributeSN.orderCode">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ChipAuthDistributeSNRsp">
+            <summary>
+            芯片授权申请SN接口出参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ChipAuthDistributeSNRsp.result">
+            <summary>
+            分配到的SN列表
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ClearChipAuthRecordReq">
+            <summary>
+            芯片授权清除SN授权记录接口入参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ClearChipAuthRecordReq.orderCode">
+            <summary>
+             工单号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ClearChipAuthRecordReq.sn">
+            <summary>
+            sn
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.ClearChipAuthRecordRsp">
+            <summary>
+            芯片授权清除SN授权记录接口出参
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ClearChipAuthRecordRsp.result">
+            <summary>
+            授权成功数量
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LicenseServicesItem">
+            <summary>
+            软件功能项注册信息
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseServicesItem.FunctionCode">
+            <summary>
+            软件功能代码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseServicesItem.FunctionName">
+            <summary>
+            软件功能名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseServicesItem.Des">
+            <summary>
+            功能描述
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseServicesItem.Expire">
+            <summary>
+            到期时间,格式为：YYYY-MM-DD,如：2021-12-30。"Infinite"为无限期有效
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseServicesItem.Enable">
+            <summary>
+            是否开通此功能项
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LicenseItem">
+            <summary>
+            软件功能项注册信息列表
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseItem.SoftwareIdentity">
+            <summary>
+            工具ID
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseItem.SoftwareName">
+            <summary>
+            工具名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.LicenseItem.LicenseServices">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.SoftwareLicense">
+            <summary>
+            软件功能项注册信息列表
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.SoftwareLicense.License">
+            <summary>
+            软件功能项注册信息列表
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.SoftwareLicense.Creator">
+            <summary>
+            创建人
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.SoftwareLicense.Create">
+            <summary>
+            创建日期
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.SoftwareLicense.Version">
+            <summary>
+            License格式版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.SoftwareLicense.port">
+            <summary>
+            加密狗通讯端口
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.SoftwareLicense.mac">
+            <summary>
+            加密狗mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetSoftwareLicenseRsp.result">
+            <summary>
+            软件功能项注册信息列表
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ReadWatchDogMacRsp.id">
+            <summary>
+            watch dog 的mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DogInfo.comport">
+            <summary>
+            加密狗串口号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DogInfo.mac">
+            <summary>
+            加密狗的mac地址
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DogInfo.url">
+            <summary>
+            License file url
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DogInfo.size">
+            <summary>
+            License file size
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DogInfo.md5">
+            <summary>
+            License file md5
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.USBWatcher">
+            <summary>
+            监控加密狗拔出
+            </summary>
+        </member>
+        <member name="M:TuyaCloudIfLib.USBWatcher.Start(System.Management.EventArrivedEventHandler,System.String)">
+            <summary>
+            开启监测加密狗是否拔除
+            </summary>
+        </member>
+        <member name="M:TuyaCloudIfLib.USBWatcher.Stop">
+            <summary>
+            停止监测加密狗是否拔除
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LoginTicketRsp">
+            <summary>
+            登录ticket 返回值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LoginTicketRsp.result">
+            <summary>
+            返回值
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.LoginTicket">
+            <summary>
+            登录ticket
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LoginTicket.ticket">
+            <summary>
+            登录ticket
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionInfoDetailReq.type">
+            <summary>
+            SN/MAC/IMEI/CTEI/CMEI/CUEI
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ProductionInfoDetailReq.value">
+            <summary>
+            值
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.code">
+            <summary>
+            编码（该编码作为彩包的包装编码）
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.sn">
+            <summary>
+            SN号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.tokenId">
+            <summary>
+            授权码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.orderCode">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.printed">
+            <summary>
+            是否已经打印,Y:已打印；N:未打印
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.packed">
+            <summary>
+            是否已经打包,Y:已打包；N:未打包
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.channelType">
+            <summary>
+            运营商类型
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.attributes">
+            <summary>
+            运营商编码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.psk">
+            <summary>
+             psk秘钥
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.imei">
+            <summary>
+            IMEI
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.patchSn">
+            <summary>
+             贴片SN
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InfoDetailMode.jdSecretKey">
+            <summary>
+            京东云秘钥
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DealWithRadioInfoReq">
+            <summary>
+            广播消息处理请求数据包定义
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DealWithRadioInfoReq.radioCode">
+            <summary>
+            广播唯一编码 从s.pt.production.radio.query.push获取
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.DealWithRadioInfoReq.action">
+            <summary>
+            用户处理广播动作
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.DealWithRadioInfoRsp">
+            <summary>
+            广播消息处理响应包定义
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.RadioActionType.confirm">
+            <summary>
+            确认
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.RadioActionType.no_prompt">
+            <summary>
+            不再提示
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.QueryRadioInfoReq">
+            <summary>
+            查询广播消息请求数据包定义
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryRadioInfoReq.publishSystem">
+            <summary>
+            消息类型：tool或pcwed,默认tool
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.QueryRadioInfoRsp">
+            <summary>
+            查询广播消息响应包定义
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryRadioInfoRsp.result">
+            <summary>
+            接收到的广播内容
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryRadioInfoDatasItem.title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryRadioInfoDatasItem.radioCode">
+            <summary>
+            广播唯一码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryRadioInfoDatasItem.content">
+            <summary>
+            广播内容
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.GetWorkorderDetailsReq">
+            <summary>
+            工单详情查询入参定义
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetWorkorderDetailsReq.workOrderCode">
+            <summary>
+            工单
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.GetWorkorderDetailsRsp">
+            <summary>
+            工单详情查询出参定义
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetWorkorderDetailsRsp.result">
+            <summary>
+            工单详情
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.GetWorkorderDetailsResult">
+            <summary>
+            工单详情查询结果
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.workOrderCode">
+            <summary>
+            工单
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.factoryCode">
+            <summary>
+            工厂编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.materielCode">
+            <summary>
+            产出物料
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.materielModel">
+            <summary>
+            物料型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.materielName">
+            <summary>
+            物料名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.craftLineCode">
+            <summary>
+            工艺路线版本编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.bomVersion">
+            <summary>
+            bom版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.num">
+            <summary>
+            工单数量
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.productPersonId">
+            <summary>
+            生产负责人Id
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.productId">
+            <summary>
+            PID
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.orderStatus">
+            <summary>
+            工单状态编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.resourceStatus">
+            <summary>
+            资源状态编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.planStartTime">
+            <summary>
+            计划开始时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.planEndTime">
+            <summary>
+            计划完成时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.tokenId">
+            <summary>
+            生产凭证
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.workOrderFlag">
+            <summary>
+            工单类型(tuya:涂鸦工单;production:生产工单)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.saleOrderCode">
+            <summary>
+            合同编号===原SO
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.channelCode">
+            <summary>
+            父运营商公司
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.channelCompany">
+            <summary>
+            子运营商公司
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.customSn">
+            <summary>
+            是否使用客户SN
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.customMac">
+            <summary>
+            是否使用客户MAC
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.snPoolId">
+            <summary>
+            客供snId===原customSnPoolId
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetWorkorderDetailsResult.macPoolId">
+            <summary>
+            客供macId===原customMacPoolId
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.SoftwareVerUpgradeReqParas">
             <summary>
             软件版本检查请求数据包结构定义
@@ -3117,6 +6114,11 @@
         <member name="T:TuyaCloudIfLib.DeviceAuthorizeVO">
             <summary>
             不常用
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.DeviceAuthorizeVO.phase">
+            <summary>
+            phase 0 未授权 1 授权失败 2 授权成功
             </summary>
         </member>
         <member name="T:TuyaCloudIfLib.DeviceAuthorizeLogVO">
@@ -4144,6 +7146,106 @@
             是否支持无感配网(例如电信无感配网)
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.productionWay">
+            <summary>
+            FIRMWARE(固件激活码) NON_FIRMWARE(无固件激活码),无固件激活码需要用独立授权
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.powerParamFileUrl">
+            <summary>
+            射频参数配置文件
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.powerParamFileMd5">
+            <summary>
+            射频参数配置文件MD5校验码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.bootPictureUrl">
+            <summary>
+            手持中控开机画面
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.supportShortLink">
+            <summary>
+            是否支持配网码短链
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.supportMatter">
+            <summary>
+            是否支持matter协议
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.supportFindMy">
+            <summary>
+            是否支持find my
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.reportImei">
+            <summary>
+            是否支持上报IMEI
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.instructions">
+            <summary>
+            高级功能/特殊功能列表
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.instructionsV2">
+            <summary>
+            高级能力及其描述
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.resGenStatus">
+            <summary>
+            资源生成状态 0表示未生成，1表示生成中，2表示生成成功
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.firmwareSource">
+            <summary>
+            固件来源 涂鸦固件 客供固件 或者为空
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.InstructionModel">
+            <summary>
+            高级能力模型
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstructionModel.code">
+            <summary>
+            高级能力代码
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstructionModel.desc">
+            <summary>
+            高级能力描述
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstructionModel.attributeConfig">
+            <summary>
+            属性设置
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstructionModel.extConfig">
+            <summary>
+            能力json配置
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.InstructionExtConfigFileModel">
+            <summary>
+            instructionsV2高级能力中的文件模型
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstructionExtConfigFileModel.name">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InstructionExtConfigFileModel.url">
+            <summary>
+            文件的相对路径
+            </summary>
+        </member>
         <member name="F:TuyaCloudIfLib.GetAuthKeyBySnReq.sn">
             <summary>
             sn
@@ -4214,7 +7316,12 @@
         </member>
         <member name="P:TuyaCloudIfLib.ReportHomekitDataUsedReq.sn">
             <summary>
-            
+            如果是工单模式，sn不能为空，接口版本号必须是1.0
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ReportHomekitDataUsedReq.uuid">
+            <summary>
+            如果是token模式，uuid不能为空，接口版本号必须是2.0
             </summary>
         </member>
         <member name="P:TuyaCloudIfLib.ReportHomekitDataUsedReq.atoken">
@@ -4285,6 +7392,11 @@
         <member name="P:TuyaCloudIfLib.GetHomeKitDataRsp.GetHomeKitDataResult.md5">
             <summary>
             zigbee homekit 压缩文件的md5
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetHomeKitDataRsp.GetHomeKitDataResult.productData">
+            <summary>
+            
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.SetCraftRouteNodePassedReq.nodeCode">
@@ -4412,6 +7524,536 @@
             模块sn
             </summary>
         </member>
+        <member name="P:TuyaCloudIfLib.AddMiniPackReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.AddMiniPackReq.sn">
+            <summary>
+            sn(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintReq.type">
+            <summary>
+            (必传)"SN"或"MAC"
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintReq.value">
+            <summary>
+            (必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintReq.stationCode">
+            <summary>
+            站位名(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintReq.customAttributes">
+            <summary>
+            自定义变量列(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintReq.requireField">
+            <summary>
+            自定义返回字段(可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.moduleProductSize">
+            <summary>
+            模块产品型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.productSize">
+            <summary>
+            产品型号（制造商型号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.createYear">
+            <summary>
+            年
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.originMaterialCode">
+            <summary>
+            原始的物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.pid">
+            <summary>
+            产品id
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.cycleWeek">
+            <summary>
+            一年的第多少周
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.mac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.baseMaterialCode">
+            <summary>
+            基础物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.sn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.firmwareVersion">
+            <summary>
+            固件版本
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.originProductSize">
+            <summary>
+            原始的产品型号（制造商型号）
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.cycleDay">
+            <summary>
+            一年的第多少天
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.tokenId">
+            <summary>
+            生产凭证
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.createDay">
+            <summary>
+            日
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.materialCode">
+            <summary>
+            物料编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.gmtCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.createMonth">
+            <summary>
+            月
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.materialName">
+            <summary>
+            生产资料1
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.cycleYear">
+            <summary>
+            第多少年 
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.orderCode">
+            <summary>
+            工单编号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetMiniPackPrintResult.pn">
+            <summary>
+            Part number
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintReq.type">
+            <summary>
+            (可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintReq.value">
+            <summary>
+            (可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintReq.offset">
+            <summary>
+            (必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintReq.limit">
+            <summary>
+            (必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.moduleProductSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.productSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.originMaterialCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.baseMaterialCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.patchTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.sn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.originProductSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.materialCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.gmtCreate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.orderCode">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.pn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.MiniPackPatchPrintDataItem.printTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintResult.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryMiniPackPatchPrintResult.totalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryPrintedNumberReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.QueryPrintedNumberReq.process">
+            <summary>
+            工序(必传) 备注：tht工序传 "tht"
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryPrintedNumberResult.notPrinted">
+            <summary>
+            未打印数量
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryPrintedNumberResult.totalPrinted">
+            <summary>
+            总数量
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryPrintedNumberResult.isPrinted">
+            <summary>
+            已打印数量
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CreateProductionInfoReq.orderCode">
+            <summary>
+            工单号(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CreateProductionInfoReq.templateCode">
+            <summary>
+            模板编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CreateProductionInfoReq.num">
+            <summary>
+            打印数量(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CreateProductionInfoReq.customAttributes">
+            <summary>
+            自定义变量(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.CreateProductionInfoReq.requireField">
+            <summary>
+            自定义返回字段(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailReq.printed">
+            <summary>
+            是否已打印(可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailReq.type">
+            <summary>
+            类型(可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailReq.value">
+            <summary>
+            (可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailReq.offset">
+            <summary>
+            (可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailReq.limit">
+            <summary>
+            (可选)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.creator">
+            <summary>
+            创建人id
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.gmtModified">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.bizType">
+            <summary>
+            业务类型
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.code">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.tokenId">
+            <summary>
+            生产凭证
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.modifier">
+            <summary>
+            修改人
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.unitNum">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.gmtCreate">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.mac">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.unitType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.sequence">
+            <summary>
+            序列号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.printed">
+            <summary>
+            是否打印
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.printedTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.isDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.patchedTime">
+            <summary>
+            补打时间
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.orderCode">
+            <summary>
+            工单编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.sn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.packed">
+            <summary>
+            包装状态(Y:是,N:否)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.isReported">
+            <summary>
+            是否为上报的SN(Y:是,N:否)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.ProductionInfoItem.status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailResult.data">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.QueryProductionInfoDetailResult.totalCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetPatchPrintInfoReq.orderCode">
+            <summary>
+            工单编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetPatchPrintInfoReq.templateCode">
+            <summary>
+            模板编码(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetPatchPrintInfoReq.snList">
+            <summary>
+            //sn列表,多个使用","分割(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetPatchPrintInfoReq.customAttributes">
+            <summary>
+            自定义变量(必传)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetPatchPrintInfoReq.requireField">
+            <summary>
+            自定义返回字段(可选)	
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PatchPrintInfoResultItem.orderCode">
+            <summary>
+            工单号
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PatchPrintInfoResultItem.sn">
+            <summary>
+            sn
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.PatchPrintInfoResultItem.mac">
+            <summary>
+            mac
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetLabelTemplateInfoReq.orderCode">
+            <summary>
+            工单
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.labelColumns">
+            <summary>
+            标签每行列数
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.imgUrl">
+            <summary>
+            图片资源url
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.gmtModified">
+            <summary>
+            修改时间戳
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.processName">
+            <summary>
+            站位名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.templateName">
+            <summary>
+            模板名称
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.processCode">
+            <summary>
+            工序编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.periodName">
+            <summary>
+            产品状态，如 半成品(PCBA)
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.fileUrl">
+            <summary>
+            标签模板文件url
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.templateCode">
+            <summary>
+            模版编码
+            </summary>
+        </member>
+        <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.packageNum">
+            <summary>
+            包装数量
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.BaseRequest">
             <summary>
             Base class of request class
@@ -4535,12 +8177,42 @@
             pcba 或者 product 或者 anker
             </summary>
         </member>
+        <member name="T:TuyaCloudIfLib.GetAuthInfoByUUIDReqV2">
+            <summary>
+            根据uuid，获取授权信息
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetAuthInfoByUUIDReqV2.uuid">
+            <summary>
+            必填，uuid
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetAuthInfoByUUIDReqV2.mac">
+            <summary>
+            MAC
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetAuthInfoByUUIDReqV2.sn">
+            <summary>
+            SN
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.GetAuthInfoByUUIDRsp">
             <summary>
             根据UUID查询授权信息和PID，SN的请求出参定义
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.GetAuthInfoByUUIDRsp.result">
+            <summary>
+             查询的结果
+            </summary>
+        </member>
+        <member name="T:TuyaCloudIfLib.GetAuthInfoByUUIDRspV2">
+            <summary>
+            根据UUID查询授权信息和PID，SN的请求出参定义
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.GetAuthInfoByUUIDRspV2.result">
             <summary>
              查询的结果
             </summary>
@@ -4725,6 +8397,11 @@
             不可为空，表示产测工具软件的版本
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.AuthReq.stationCode">
+            <summary>
+            站位编码，多模组多固件工单不能为空
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.AuthRsp">
             <summary>
             提交授权数量校正接口请求，校正数据可能需要10秒钟
@@ -4782,7 +8459,7 @@
         </member>
         <member name="F:TuyaCloudIfLib.QueryFactoryInfoResult.factoryType">
             <summary>
-            工厂类型
+            工厂类型  PROTOCOL协议工厂  PERSONAL个人账户  THIRD第三方
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.QueryFactoryInfoResult.welcome">
@@ -5075,6 +8752,16 @@
             授权失败原因描述
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.TokenAuthValidateResult.successAmount">
+            <summary>
+            授权成功数量
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.TokenAuthValidateResult.amount">
+            <summary>
+            token有效数量
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.GetUserInfoReq">
             <summary>
             根据sessionId查询用户信息的入参定义,不需要传任何参数
@@ -5218,6 +8905,11 @@
         <member name="F:TuyaCloudIfLib.ResultItem.firmwareVersion">
             <summary>
             固件版本
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.ResultItem.fingerprint">
+            <summary>
+            固件标识名
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.ResultItem.tokenId">
@@ -5625,6 +9317,126 @@
             <summary>
             用户注销登录返回结果
             </summary>
+        </member>
+        <member name="T:Tuya.WMI.PnPEntityInfo">
+            <summary>
+            即插即用设备信息结构
+            </summary>
+        </member>
+        <member name="T:Tuya.WMI.USB">
+            <summary>
+            基于WMI获取USB设备信息
+            </summary>
+        </member>
+        <member name="M:Tuya.WMI.USB.AllSerialPorts(System.UInt16,System.UInt16)">
+            <summary>
+            获取串口号
+            </summary>
+            <param name="VendorID">vid</param>
+            <param name="ProductID">pid</param>
+            <returns></returns>
+        </member>
+        <member name="P:Tuya.WMI.USB.AllUsbDevices">
+            <summary>
+            获取所有的USB设备实体（过滤没有VID和PID的设备）
+            </summary>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoUsbDevice(System.UInt16,System.UInt16,System.Guid)">
+            <summary>
+            查询USB设备实体（设备要求有VID和PID）
+            </summary>
+            <param name="VendorID">供应商标识，MinValue忽视</param>
+            <param name="ProductID">产品编号，MinValue忽视</param>
+            <param name="ClassGuid">设备安装类Guid，Empty忽视</param>
+            <returns>设备列表</returns>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoUsbDevice(System.UInt16,System.UInt16)">
+            <summary>
+            查询USB设备实体（设备要求有VID和PID）
+            </summary>
+            <param name="VendorID">供应商标识，MinValue忽视</param>
+            <param name="ProductID">产品编号，MinValue忽视</param>
+            <returns>设备列表</returns>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoUsbDevice(System.Guid)">
+            <summary>
+            查询USB设备实体（设备要求有VID和PID）
+            </summary>
+            <param name="ClassGuid">设备安装类Guid，Empty忽视</param>
+            <returns>设备列表</returns>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoUsbDevice(System.String)">
+            <summary>
+            查询USB设备实体（设备要求有VID和PID）
+            </summary>
+            <param name="PNPDeviceID">设备ID，可以是不完整信息</param>
+            <returns>设备列表</returns>       
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoUsbDevice(System.String[])">
+            <summary>
+            根据服务定位USB设备
+            </summary>
+            <param name="ServiceCollection">要查询的服务集合</param>
+            <returns>设备列表</returns>
+        </member>
+        <member name="P:Tuya.WMI.USB.AllPnPEntities">
+            <summary>
+            所有即插即用设备实体（过滤没有VID和PID的设备）
+            </summary>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoPnPEntity(System.UInt16,System.UInt16,System.Guid)">
+            <summary>
+            根据VID和PID及设备安装类GUID定位即插即用设备实体
+            </summary>
+            <param name="VendorID">供应商标识，MinValue忽视</param>
+            <param name="ProductID">产品编号，MinValue忽视</param>
+            <param name="ClassGuid">设备安装类Guid，Empty忽视</param>
+            <returns>设备列表</returns>
+            <remarks>
+            HID：{745a17a0-74d3-11d0-b6fe-00a0c90f57da}
+            Imaging Device：{6bdd1fc6-810f-11d0-bec7-08002be2092f}
+            Keyboard：{4d36e96b-e325-11ce-bfc1-08002be10318}
+            Mouse：{4d36e96f-e325-11ce-bfc1-08002be10318}
+            Network Adapter：{4d36e972-e325-11ce-bfc1-08002be10318}
+            USB：{36fc9e60-c465-11cf-8056-444553540000}
+            </remarks>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoPnPEntity(System.UInt16,System.UInt16)">
+            <summary>
+            根据VID和PID定位即插即用设备实体
+            </summary>
+            <param name="VendorID">供应商标识，MinValue忽视</param>
+            <param name="ProductID">产品编号，MinValue忽视</param>
+            <returns>设备列表</returns>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoPnPEntity(System.Guid)">
+            <summary>
+            根据设备安装类GUID定位即插即用设备实体
+            </summary>
+            <param name="ClassGuid">设备安装类Guid，Empty忽视</param>
+            <returns>设备列表</returns>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoPnPEntity(System.String)">
+            <summary>
+            根据设备ID定位设备
+            </summary>
+            <param name="PNPDeviceID">设备ID，可以是不完整信息</param>
+            <returns>设备列表</returns>
+            <remarks>
+            注意：对于下划线，需要写成“[_]”，否则视为任意字符
+            </remarks>
+        </member>
+        <member name="M:Tuya.WMI.USB.WhoPnPEntity(System.String[])">
+            <summary>
+            根据服务定位设备
+            </summary>
+            <param name="ServiceCollection">要查询的服务集合，null忽视</param>
+            <returns>设备列表</returns>
+            <remarks>
+            跟服务相关的类：
+                Win32_SystemDriverPNPEntity
+                Win32_SystemDriver
+            </remarks>
         </member>
     </members>
 </doc>
