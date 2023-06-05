@@ -924,6 +924,30 @@
             <param name="str">要解密的字符串</param> 
             <returns>解密后的字符串</returns>   
         </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.StationCheckNode(TuyaCloudIfLib.StationReq,System.String)">
+            <summary>
+            过站检测上报接口 [m.pms.tool.check.node.pass]
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer"></param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.GetHotSpotPin(TuyaCloudIfLib.HPReq,System.String)">
+            <summary>
+             获取热点信息和pin
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ShortlinkBind(TuyaCloudIfLib.InputShortlinkReq,System.String)">
+            <summary>
+             数据上报接口
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">1.0</param>
+            <returns></returns>
+        </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.LoginTicketCreate(System.String)">
             <summary>
             创建登录ticket [s.pt.csm.or.prod.login.ticket.create]
@@ -954,6 +978,14 @@
             </summary>
             <param name="ReqParas"></param>
             <param name="apiVer">接口版本</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ProductionDataReport(TuyaCloudIfLib.InputReportReq,System.String)">
+            <summary>
+             数据上报接口
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">1.0</param>
             <returns></returns>
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.SoftwareVersionUpgrade(TuyaCloudIfLib.SoftwareVerUpgradeReqParas,System.String)">
@@ -1231,6 +1263,21 @@
             <param name="ReqParas"></param>
             <param name="apiVer"></param>
             <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.MSNBind(TuyaCloudIfLib.MSNBindReq,System.String)">
+            <summary>
+             MSN绑定
+            </summary>
+            <param name="ReqParas"></param>
+            <param name="apiVer">1.0</param>
+            <returns></returns>
+        </member>
+        <member name="M:TuyaCloudIfLib.TuyaCloudIf.ValidateData(System.String,System.String)">
+            <summary>
+            云端数据校验  
+            </summary>
+            <param name="pid"></param>
+            <param name="uuid"></param>
         </member>
         <member name="M:TuyaCloudIfLib.TuyaCloudIf.CreateGetHttpResponse(System.String,System.Nullable{System.Int32},System.String,System.Net.CookieCollection)">
             <summary>   
@@ -1884,6 +1931,21 @@
             crc32
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.LocalCertificate.algorithm">
+            <summary>
+            算法
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LocalCertificate.curve">
+            <summary>
+            curve
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.LocalCertificate.hash">
+            <summary>
+            哈希值
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.DeviceAuthResAssignPskRegisterCenter">
             <summary>
             设备注册中心
@@ -1969,6 +2031,46 @@
             matter的payload
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.productName">
+            <summary>
+            产品名称
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.partNumber">
+            <summary>
+            产品型号
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.vendorName">
+            <summary>
+            供应商名称
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.hardwareVersion">
+            <summary>
+            硬件版本
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.productId">
+            <summary>
+            产品ID
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.hardwareVersionString">
+            <summary>
+            硬件版本字符串
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.customFlow">
+            <summary>
+            配网方式
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MatterPayload.serialNumber">
+            <summary>
+            序列号
+            </summary>
+        </member>
         <member name="F:TuyaCloudIfLib.MatterPayload.version">
             <summary>
             版本，默认0
@@ -1976,17 +2078,7 @@
         </member>
         <member name="F:TuyaCloudIfLib.MatterPayload.vendorId">
             <summary>
-            厂家ID
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.MatterPayload.productId">
-            <summary>
-            产品id
-            </summary>
-        </member>
-        <member name="F:TuyaCloudIfLib.MatterPayload.customFlow">
-            <summary>
-            调测流程
+            供应商ID
             </summary>
         </member>
         <member name="F:TuyaCloudIfLib.MatterPayload.discoveryCapabilities">
@@ -5876,6 +5968,26 @@
             客供macId===原customMacPoolId
             </summary>
         </member>
+        <member name="T:TuyaCloudIfLib.InputDataType">
+            <summary>
+            数据类型映射维护到枚举平台
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InputDataType.finish_product">
+            <summary>
+            成品类型（主要对应 标签打印工具）标签打印：TYPT_WSPP
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InputDataType.semi_finish_product">
+            <summary>
+            半成品或成品类型（对应 传感及其他产品 等生产测试工具） 安防传感：TYPT_SecuritySensorTestTool
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.InputDataType.short_link_bind">
+            <summary>
+            短链绑定工具
+            </summary>
+        </member>
         <member name="T:TuyaCloudIfLib.SoftwareVerUpgradeReqParas">
             <summary>
             软件版本检查请求数据包结构定义
@@ -7081,6 +7193,11 @@
             次固件的下载地址
             </summary>
         </member>
+        <member name="F:TuyaCloudIfLib.TokenInfo.pidBindingRelation">
+            <summary>
+            NB授权pid绑定关系
+            </summary>
+        </member>
         <member name="F:TuyaCloudIfLib.TokenInfo.productionSubFirmwareMd5">
             <summary>
             次固件的MD5校验码
@@ -8052,6 +8169,11 @@
         <member name="P:TuyaCloudIfLib.GetLabelTemplateInfoResultItem.packageNum">
             <summary>
             包装数量
+            </summary>
+        </member>
+        <member name="F:TuyaCloudIfLib.MSNRsp.result">
+            <summary>
+            业务参数返回->风良说：success为true的前提下判断有意义
             </summary>
         </member>
         <member name="T:TuyaCloudIfLib.BaseRequest">
