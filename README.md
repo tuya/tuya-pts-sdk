@@ -9,7 +9,6 @@
 Tuya Smart production test SDK provides interfaces for the communication with hardware and Tuya Cloud to accelerate the application development process, including the following features:
 
 - Hardware functions (GPIO, write/read MAC, authorize, firmware version check, and more)
-- Tuya device RF test package
 - Tuya Cloud HTTP API package
 
 ## Download SDK
