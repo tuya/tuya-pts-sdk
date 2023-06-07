@@ -10,11 +10,6 @@
 
 - 涂鸦云HTTP API接口封装
 - 硬件设备相关(进产测模式，读写MAC，GPIO测试，授权测试等)
-- 涂鸦设备RF测试接口封装
-
-## SDK下载地址
-
-[https://github.com/TuyaInc/TUYA_PTS_SDK/tree/master/TuyaCloudLib]
 
 ## 开发文档
 
