@@ -39,7 +39,7 @@ namespace LDTY
             //else if (dongle类型为蓝牙类型)
             //{
             //   //发送查询dongle信息【子命令0x001C】来获取dongle固件版本号
-            //   //发送蓝牙 dongle设备信息同步【子命令0x001F】 max_sync_time 设置为 -1那么dongle在收到设备同步信
+            //   //发送wifi dongle设备信息同步【子命令0x001F】 max_sync_time 设置为 -1那么dongle在收到设备同步信
             //   //息后会直接上报 ==>获取设备的 uuid
             //   //将uuid“界面入参”走以下流程
             //}
