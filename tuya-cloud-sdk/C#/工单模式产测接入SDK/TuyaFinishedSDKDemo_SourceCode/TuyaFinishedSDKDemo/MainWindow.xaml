@@ -1,0 +1,125 @@
+﻿<hc:Window x:Class="TuyaFinishedSDKDemo.MainWindow"
+           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+           xmlns:hc="https://handyorg.github.io/handycontrol"
+           xmlns:local="clr-namespace:TuyaFinishedSDKDemo"
+           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+           Title="工单模式产测接入SDK 1.0.0.0"
+           Width="800"
+           Height="450"
+           Icon="Tuya.ico"
+           SizeChanged="Window_SizeChanged"
+           mc:Ignorable="d">
+    <hc:Window.DataContext>
+        <Binding Path="MainVM" Source="{StaticResource Locator}" />
+    </hc:Window.DataContext>
+    <Grid hc:InfoElement.TitlePlacement="Left" hc:InfoElement.TitleWidth="90">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid Margin="10">
+            <TextBlock Margin="20,0,0,0" VerticalAlignment="Center" Text="{Binding Infomation}" />
+        </Grid>
+        <Grid x:Name="LoginGrid" Grid.Row="1" Visibility="{Binding IsLogin, Converter={StaticResource Boolean2VisibilityReConverter}}">
+
+            <hc:SimplePanel x:Name="LoginSimplePanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel VerticalAlignment="Center">
+                    <StackPanel>
+                        <hc:TextBox hc:TitleElement.Title="用户名" Text="{Binding UserName}" />
+                        <hc:TextBox hc:TitleElement.Title="密码" Text="{Binding Password}" />
+                    </StackPanel>
+                    <Button x:Name="LoginButton"
+                            Width="120"
+                            Margin="20"
+                            HorizontalAlignment="Right"
+                            Command="{Binding TuyaButtonCommand}"
+                            CommandParameter="{Binding ElementName=LoginButton}"
+                            Content="登录"
+                            Style="{StaticResource ButtonSuccess}" />
+                </StackPanel>
+
+            </hc:SimplePanel>
+
+        </Grid>
+        <Grid Grid.Row="1" Visibility="{Binding IsLogin, Converter={StaticResource Boolean2VisibilityConverter}}">
+            <hc:SimplePanel x:Name="ProductTransitSimplePanel" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <StackPanel VerticalAlignment="Center">
+                    <StackPanel>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="auto" />
+                            </Grid.ColumnDefinitions>
+                            <hc:TextBox x:Name="WorkOrderTextBox"
+                                        Margin="0,2"
+                                        hc:TitleElement.Title="工单"
+                                        PreviewKeyDown="WorkOrderTextBox_PreviewKeyDown"
+                                        PreviewTextInput="WorkOrderTextBox_PreviewTextInput"
+                                        Text="{Binding WorkOrder}" />
+                            <Button x:Name="WorkOrderButton"
+                                    Grid.Column="1"
+                                    Margin="5,2"
+                                    HorizontalAlignment="Right"
+                                    Command="{Binding TuyaButtonCommand}"
+                                    CommandParameter="{Binding ElementName=WorkOrderButton}"
+                                    Content="确定"
+                                    Style="{StaticResource ButtonSuccess}" />
+                        </Grid>
+                        <hc:TextBox Margin="0,2"
+                                    hc:TitleElement.Title="产品信息"
+                                    IsReadOnly="True"
+                                    Text="{Binding ProductModel}" />
+                        <hc:ComboBox Margin="0,2"
+                                     hc:TitleElement.Title="工序"
+                                     DisplayMemberPath="desc"
+                                     ItemsSource="{Binding NodeList}"
+                                     SelectedValue="{Binding OrderNode, Mode=TwoWay}" />
+                        <hc:TextBox Margin="0,2" hc:TitleElement.Title="SN" Text="{Binding ProductSN}" />
+                    </StackPanel>
+
+                    <Grid Margin="0,20">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock VerticalAlignment="Center" Text="{Binding MessageInfo}" />
+                        <Button x:Name="ProductTransitButton"
+                                Grid.Column="2"
+                                Width="120"
+                                Margin="10,0"
+                                HorizontalAlignment="Right"
+                                Command="{Binding TuyaButtonCommand}"
+                                CommandParameter="{Binding ElementName=ProductTransitButton}"
+                                Content="成品过站"
+                                Style="{StaticResource ButtonSuccess}" />
+                        <Button x:Name="ProductionTestLogUpload"
+                                Grid.Column="1"
+                                Width="120"
+                                HorizontalAlignment="Right"
+                                Command="{Binding TuyaButtonCommand}"
+                                CommandParameter="{Binding ElementName=ProductionTestLogUpload}"
+                                Content="日志上报"
+                                Style="{StaticResource ButtonSuccess}" />
+                    </Grid>
+
+                </StackPanel>
+
+            </hc:SimplePanel>
+
+        </Grid>
+        <Grid x:Name="XXXX"
+              Grid.RowSpan="2"
+              Background="Gray"
+              Opacity="0.5"
+              Visibility="Collapsed">
+            <hc:LoadingLine Margin="0,30"
+                            Foreground="Red"
+                            Opacity="1"
+                            Style="{StaticResource LoadingLineLarge}" />
+        </Grid>
+
+    </Grid>
+</hc:Window>

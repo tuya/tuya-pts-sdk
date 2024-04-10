@@ -1,0 +1,8 @@
+{
+	"TestItem": [
+		{
+			"Code": "CHECK_STATION",
+			"Description": "过站信息检查"
+		}
+	]
+}
