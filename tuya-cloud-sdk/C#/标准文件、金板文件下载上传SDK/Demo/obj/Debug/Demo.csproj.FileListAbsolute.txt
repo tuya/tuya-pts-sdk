@@ -1,0 +1,13 @@
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\bin\Debug\Demo.exe
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\bin\Debug\Demo.pdb
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\bin\Debug\StandardFileHelper.dll
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\bin\Debug\TuyaCloudIfLib.dll
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\bin\Debug\Newtonsoft.Json.dll
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\bin\Debug\BouncyCastle.Crypto.dll
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.Form1.resources
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.Properties.Resources.resources
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.csproj.GenerateResource.cache
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.csproj.CopyComplete
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.exe
+D:\work\localgit\ProductionTest\标准文件拉取线损文件上报\Demo\obj\Debug\Demo.pdb
