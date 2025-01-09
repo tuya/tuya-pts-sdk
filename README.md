@@ -1,6 +1,6 @@
 # Tuya Smart Production Test SDK
 
-[中文版](https://github.com/TuyaInc/TUYA_PTS_SDK/blob/master/README_zh.md) | [English](https://github.com/TuyaInc/TUYA_PTS_SDK/blob/master/README.md)
+[中文版](https://github.com/tuya/tuya-pts-sdk/blob/main/README_zh.md) | [English](https://github.com/tuya/tuya-pts-sdk/blob/main/README.md)
 
 ------
 
